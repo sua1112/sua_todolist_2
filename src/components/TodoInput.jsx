@@ -1,7 +1,15 @@
-function TodoInput({ input, setInput, priority, setPriority, addTodo }) {
+function TodoInput({
+  input,
+  setInput,
+  priority,
+  setPriority,
+  addTodo,
+  inputRef,
+}) {
   return (
     <div className="input-section">
       <input
+        ref={inputRef} //{/* ref 연결 */}
         className="todo-input"
         value={input}
         onChange={(e) => setInput(e.target.value)}
